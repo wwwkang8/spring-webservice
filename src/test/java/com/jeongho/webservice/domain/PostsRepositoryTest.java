@@ -1,5 +1,7 @@
-package com.jeongho.webservice.domain.posts;
+package com.jeongho.webservice.domain;
 
+import com.jeongho.webservice.domain.posts.Posts;
+import com.jeongho.webservice.domain.posts.PostsRepository;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,11 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 
 import java.util.List;
 
-import static org.hamcrest.MatcherAssert.assertThat;
+
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -31,7 +34,7 @@ public class PostsRepositoryTest {
 
     @Test
     public void 게시글저장_불러오기() {
-       /* //given
+        //given
         postsRepository.save(Posts.builder()
                 .title("테스트 게시글")
                 .content("테스트 본문")
@@ -44,6 +47,6 @@ public class PostsRepositoryTest {
         //then
         Posts posts = postsList.get(0);
         assertThat(posts.getTitle(), is("테스트 게시글"));
-        assertThat(posts.getContent(), is("테스트 본문"));*/
+        assertThat(posts.getContent(), is("테스트 본문"));
     }
 }
